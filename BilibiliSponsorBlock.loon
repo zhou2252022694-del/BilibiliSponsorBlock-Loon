@@ -1,0 +1,14 @@
+# Loon 插件配置文件
+[Plugin]
+name = "BilibiliSponsorBlock"
+author = "hanydd & Copilot Chat"
+version = "1.0.0"
+description = "B站 SponsorBlock 自动过滤剧集广告片头片尾分段"
+script = "bilibiliSponsorBlock_loon.js"
+icon = ""
+
+[Script]
+http-response ^https:\/\/api\.bilibili\.com\/pgc\/player\/web\/season\/section\? requires-body=1, script-path=https://raw.githubusercontent.com/zhou2252022694-del/BilibiliSponsorBlock-Loon/main/bilibiliSponsorBlock_loon.js, tag=B站SponsorBlock自动过滤
+
+[MITM]
+hostname = api.bilibili.com, bsbsb.top
